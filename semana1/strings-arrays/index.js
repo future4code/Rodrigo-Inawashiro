@@ -1,144 +1,130 @@
-// Exemplos
+// Exercícios de interpretação de código
 
-// Exercício 0A
-function soma() {
-  // escreva seu código aqui
-  const num1 = prompt('Digite o primeiro número')
-  const num2 = prompt('Digite o segundo número')
+// 1)O que vai ser impresso no console?
+// a)Seria impresso  10 e 50
+// b) Sem console.log não seria impresso nada , não apareceria no console
 
-  console.log(Number(num1) + Number(num2))
+
+//2) a) Essa função transforma em letras minusculas as letras e verifica se a palavra "cenoura" se encontra 
+//na entrada do usuario, retornando true ou false.
+
+//b) i) true
+//  ii) true
+//  iii) true 
+
+//Exercícios de escrita de código
+
+//1)a)
+
+/*function falarSobreVoce() {
+
+    const pessoal = (`Eu sou ${eu}, tenho ${numero}anos, moro em ${lugar} e sou ${trabalho}`)
+    const eu = Rodrigo
+    const numero = 33
+    const lugar = Sampa 
+    const trabalho = programador
+
+    return eu
+    return numero
+    return lugar
+    return trabalho
+    return pessoal
+
+
 }
 
-// Exercício 0B
-function imprimeMensagem() {
-  // escreva seu código aqui
-  const mensagem = prompt('Digite sua mensagem')
+console.log(falarSobreVoce)*/
 
-  console.log(mensagem)
+
+
+//b)
+
+/*function informaçoesPessoais(nome, idade, cidade, profissão) {
+    const pessoa = (`Eu sou ${nome}, tenho ${Number(idade)} anos, moro em ${cidade} e sou ${profissão}.`)
+    return pessoa
+
 }
 
-// ---------------------------------------------------
-// Exercícios
+console.log(informaçoesPessoais("Rodrigo", "40", "Itaqua", "Pogramador"))*/
 
-// Exercício 1
-function calculaAreaRetangulo() {
+
+// 2- Escreva as funções explicadas abaixo:
+
+//a)
+/*function numeros(n1,n2) {
+    const soma = (n1+n2)
+    return soma
+}
+ 
+console.log(numeros(4,8))
+console.log(numeros(2,15))*/
+
+//b)
+/*function numeros(n1,n2) {
+    const maiorIgual = (n1>=n2)
+    return maiorIgual
+}
+ console.log(numeros(7,4))
+ console.log(numeros(5,9))*/
+
+/* c)
+function numeroPar (n) {
+    const resultado = (n%2==0)
+    return resultado
+}
+
+console.log(numeroPar(5))
+console.log(numeroPar(4))*/
+
+//d)
+/*const verificarFrase = (texto) => {
+    const verificar = texto
+    return verificar
+}
+
+const frase = verificarFrase(prompt("Escreva sua frase:"))
+
+console.log("Contagem da frase:"+frase.length+"\n"+"Frase em letras maiusculas:"+frase.toUpperCase())*/
+
+//3)
+
+/*const num1 = 30
+const num2 = 3
+
+function somarNumeros (num1, num2)  {
+    const soma = num1 + num2
+    return soma
+}
+
+function subtrairNumeros(num1, num2) {
+    const subtracao = num1 - num2
+    return subtracao
+}
+
+function multiplicarNumeros(num1, num2) {
+    const multiplicacao = num1 * num2
+    return multiplicacao
+}
+
+function dividirNumeros(num1, num2) {
+    const divisao = num1 / num2
+    return divisao
+}
+
+
+console.log("Soma: ",somarNumeros())
+console.log("Subtração: ",subtrairNumeros())
+console.log("Multiplicação: ",multiplicarNumeros())
+console.log("ddivisão: ",dividirNumeros())*/
+
+
+
+
+
+
+
+
+
   
-  const altura = Number(prompt("Digite a altura:"))
-  const largura = Number(prompt("Digite a largura:"))
-  const areaRetangulo = altura*largura
-  console.log(areaRetangulo)
 
-}
-
-// Exercício 2
-function imprimeIdade() {
-  // escreva seu código aqui
-  let anoAtual = Number(prompt("Digite o ano atual:"))
-  let nascimento = Number(prompt("Digite o seu ano de nascimento:"))
-  const idade = anoAtual-nascimento
-  console.log(idade)
-}
-
-// Exercício 3
-function calculaIMC() {
-  // escreva seu código aqui
-  let peso = Number(prompt("Digite o seu peso:"))
-  let altura = Number(prompt("Digite a sua altura:"))
-  const imc = peso/(altura*altura)
-  console.log(imc)
-
-}
-
-// Exercício 4
-function imprimeInformacoesUsuario() {
-  // escreva seu código aqui
-  const nome= prompt("Digite o seu nome:")
-  const idade = prompt("Digite a sua idade:")
-  const email = prompt("Digite o seu email:")
-  console.log("Meu nome é " + nome + ", tenho " + idade +" anos, e o meu email é " + email+".")
-}
-
-
-// Exercício 5
-function imprimeTresCoresFavoritas() {
-  // escreva seu código aqui
-  let coresFavoritas1 = prompt("Digite sua primeira cor favorita:")
-  let coresFavoritas2 = prompt("Digite sua segunda cor favorita:")
-  let coresFavoritas3 = prompt("Digite sua terceira cor favorita:")  
-  const arrayCores = [coresFavoritas1,coresFavoritas2,coresFavoritas3]
-
-  console.log(arrayCores)
-  
-
-
-}
-
-// Exercício 6
-function retornaStringEmMaiuscula() {
-  // escreva seu código aqui
-  const comida = prompt("Digite sua comida preferida:")
-  console.log(comida.toUpperCase())
-}
-
-// Exercício 7
-function calculaIngressosEspetaculo() {
-  // escreva seu código aqui
-  let custoEspetaculo = Number(prompt("Diga qual o custo do espetaculo:"))
-  let valorIngresso = Number(prompt("Diga qual valor de cada ingresso:"))
-  console.log(custoEspetaculo/valorIngresso)
-
-}
-
-// Exercício 8
-function checaStringsMesmoTamanho() {
-  // escreva seu código aqui
-  let string1 = prompt("Diga sua cor preferida:")
-  let string2 = prompt("Diga outra cor :")
-  console.log(string1.length === string2.length)
-}
-
-// Exercício 9
-function checaIgualdadeDesconsiderandoCase() {
-  // escreva seu código aqui
-  let comida1 = prompt("Diga o nome de uma comida:")
-  let comida2 = prompt("Diga uma sobremesa:")
-  console.log(comida1.toLowerCase() === comida2.toLowerCase())
-
-
-
-}
-
-// Exercício 10
-function checaRenovacaoRG() {
-  // escreva seu código aqui
-  const anoAtual = Number(prompt("Digite o ano atual:"))
-  const anoDeNascimento = Number(prompt("Digite seu ano de nascimento:"))
-  const anoEmissao = Number(prompt("Digite ano em que sua carteira de identidade foi emitida:"))
-  const idade = anoAtual - anoDeNascimento
-  const tempoDeemissao = anoAtual - anoEmissao
-
-  
-  console.log((idade <= 20 && tempoDeemissao >= 5) || (idade > 20 && idade <= 50 && tempoDeemissao >= 10) || (idade > 50 && tempoDeemissao >= 15))
-
-
-
-}
-
-// Exercício 11
-function checaAnoBissexto() {
-  // escreva seu código aqui
-  const ano = Number(prompt("Digite um ano:"))
-  console.log((ano % 400 === 0) || (ano % 4 === 0) && (ano % 100 != 0))
-
-}
-
-// Exercício 12
-function checaValidadeInscricaoLabenu() {
-  // escreva seu código aqui
-
-  let labenuIdade = (prompt("Você tem mais de 18 anos?"))
-  let labenuescolaridade = (prompt("Você possui ensino médio completo?"))
-  let labenuDisponibilidade = (prompt("Você possui disponibilidade exclusiva durante os horários do curso?"))
-
-  console.log(labenuIdade == "sim" && labenuescolaridade == "sim" && labenuDisponibilidade == "sim")
 
