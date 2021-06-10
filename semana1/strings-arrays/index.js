@@ -120,11 +120,3 @@ console.log("ddivisão: ",dividirNumeros())*/
 
 
 
-
-
-
-
-
-  
-
-
