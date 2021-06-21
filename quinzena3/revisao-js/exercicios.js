@@ -60,6 +60,14 @@ return respostas
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
+  let arrayNumPares = []
+for(let valor of array)  {
+  if(valor % 2 === 0) {
+    arrayNumPares.push(valor)    
+  }
+}
+console.log(arrayNumPares)
+}
 
 }
 
