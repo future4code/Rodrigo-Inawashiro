@@ -1,0 +1,43 @@
+h1 {
+    color:  blue;
+    background-color: aquamarine;
+}
+
+p {
+    color: red;
+    background-color: chartreuse;
+}
+
+h2 {
+    color:darkblue;
+    background-color: orange;
+}
+
+ol {
+    background-color: peachpuff;
+    border: 2px black;
+}
+   
+tr {
+    color: blue;
+    background-color:peachpuff ;
+}
+
+div {
+    color:blue;
+    background-color: rgb(236, 245, 119);
+       
+}
+
+.legenda {
+    border: 1px black;
+    background-color: rgb(233, 212, 173);
+}
+
+.legenda1 {
+    background-color: paleturquoise;
+}
+
+.foto {
+    display: inline-block;
+}
