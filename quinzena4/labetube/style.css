@@ -1,0 +1,41 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header  {
+    display: flex;
+    background-color: peru;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+   
+}
+
+.primeirotexto {
+    margin-left: 20px;
+}
+
+.botao {
+    margin-right: 80px;
+}
+
+footer {
+    display: flex;
+    background-color: gray;
+    justify-content: left;
+    height: 80px;
+  
+}
+
+.textoFooter {
+    margin-left: 20px;
+}
+
+.video {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, ifr);
+    grid-template-rows: 300px 300px 300px 300px;
+}
