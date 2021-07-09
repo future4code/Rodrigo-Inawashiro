@@ -1,0 +1,45 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header  {
+    display: flex;
+    background-color: peru;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+   
+}
+
+.primeirotexto {
+    margin-left: 20px;
+}
+
+.botao {
+    margin-right: 80px;
+}
+
+footer {
+    display: flex;
+    background-color: gray;
+    justify-content: left;
+    height: 80px;
+  
+}
+
+.textoFooter {
+    margin-left: 20px;
+}
+
+.grid-container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+    }
