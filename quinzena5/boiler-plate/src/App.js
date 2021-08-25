@@ -1,109 +1,52 @@
-import React from 'react'
-import styled from 'styled-components'
-import './styles.css'
+import { Filtros } from "./components/Filtros";
+import { Produtos } from "./components/Produtos";
+import { Carrinho } from "./components/Carrinho";
+import styled from "styled-components";
+import React from "react";
 
-const TarefaList = styled.ul`
-  padding: 0;
-  width: 200px;
-`
-
-const Tarefa = styled.li`
-  text-align: left;
-  text-decoration: ${({completa}) => (completa ? 'line-through' : 'none')};
-`
-
-const InputsContainer = styled.div`
+const AppContainer = styled.div`
   display: grid;
-  grid-auto-flow: column;
-  gap: 10px;
-`
+  grid-template-columns: 1fr 2fr 1fr;
+`;
 
 class App extends React.Component {
-    state = {
-      tarefas: [
-        {
-          id: Date.now(), 
-          texto: 'Estudar programação',
-          completa: false 
-        },
-        {
-          id: Date.now(), 
-          texto: 'Assistir aula',
-          completa: true 
-        }
-      ],
-      inputValue: '',
-      filtro: ''
-    }
-
-  componentDidUpdate() {
-
+  state = {
+    carrinho: [],
+    pagina: "produtos",
   };
 
-  componentDidMount() {
+  onClickAdicionarCarrinho = (produto) => {
+    const copiaCarrinho = [...this.state.carrinho];
+    copiaCarrinho.push(produto);
 
+    this.setState({ carrinho: copiaCarrinho });
   };
 
-  onChangeInput = (event) => {
+  onClickTrocaPagina = () => {
+    const novaPagina = this.state.pagina === "produtos" ? 'carrinho' : 'produtos'
 
-  }
-
-  criaTarefa = () => {
-
-  }
-
-  selectTarefa = (id) => {
-
-  }
-
-  onChangeFilter = (event) => {
-
+    this.setState({pagina: novaPagina})
   }
 
   render() {
-    const listaFiltrada = this.state.tarefas.filter(tarefa => {
-      switch (this.state.filtro) {
-        case 'pendentes':
-          return !tarefa.completa
-        case 'completas':
-          return tarefa.completa
-        default:
-          return true
-      }
-    })
-
     return (
-      <div className="App">
-        <h1>Lista de tarefas</h1>
-        <InputsContainer>
-          <input value={this.state.inputValue} onChange={this.onChangeInput}/>
-          <button onClick={this.criaTarefa}>Adicionar</button>
-        </InputsContainer>
-        <br/>
-
-        <InputsContainer>
-          <label>Filtro</label>
-          <select value={this.state.filter} onChange={this.onChangeFilter}>
-            <option value="">Nenhum</option>
-            <option value="pendentes">Pendentes</option>
-            <option value="completas">Completas</option>
-          </select>
-        </InputsContainer>
-        <TarefaList>
-          {listaFiltrada.map(tarefa => {
-            return (
-              <Tarefa
-                completa={tarefa.completa}
-                onClick={() => this.selectTarefa(tarefa.id)}
-              >
-                {tarefa.texto}
-              </Tarefa>
-            )
-          })}
-        </TarefaList>
-      </div>
-    )
+      <>
+        <AppContainer>
+          {this.state.pagina === "produtos" ? (
+            <>
+              <Filtros />
+              <Produtos
+                onClickAdicionarCarrinho={this.onClickAdicionarCarrinho}
+              />
+            </>
+          ) : (
+            <Carrinho produtosCarrinho={this.state.carrinho} />
+          )}
+        </AppContainer>
+        <button onClick={this.onClickTrocaPagina}>Troca de página</button>
+      </>
+    );
   }
 }
 
-export default App
+export default App;
