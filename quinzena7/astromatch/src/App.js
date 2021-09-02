@@ -1,14 +1,28 @@
-import logo from './logo.svg';
-import styled from "styled-components";
-import axios  from 'axios';
-import { useState, useEffect} from 'react';
+import React from "react"
+import { HomePage } from "./pages/HomePage/HomePage"
+import { MatchesPage } from "./pages/MatchesPage/MatchesPage"
+import foto from "./components/Header/Foto Rosto.PNG"
 
-const App = () => {
-  const [perfil, setPerfil] = useState[0];
-
-  
+const usuarioAstromatch = {
+  nome: "Juan"
+  foto: 
 }
 
-export default App;
+const App = () => {
+
+  //Renderização Condicional
+  // Estado que diz qual é a tela que está aparecendo
+  // Função para mudar de tela
 
 
+  return (
+    <div>
+      Astromatch
+      <HomePage/>
+      <MatchesPage/>
+    </div>
+  )
+
+}
+
+export default App
