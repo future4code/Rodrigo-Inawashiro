@@ -1,28 +1,33 @@
-import React from "react"
+import React, {useState} from "react"
 import { HomePage } from "./pages/HomePage/HomePage"
 import { MatchesPage } from "./pages/MatchesPage/MatchesPage"
-import foto from "./components/Header/Foto Rosto.PNG"
 
-const usuarioAstromatch = {
-  nome: "Juan"
-  foto: 
-}
 
 const App = () => {
+  const [currentPage, setCurrentPage] = useState("home")
 
-  //Renderização Condicional
-  // Estado que diz qual é a tela que está aparecendo
-  // Função para mudar de tela
+  const changePage = () => {
+    if (currentPage === "home") {
+      setCurrentPage("mattches")
+    }else {
+      setCurrentPage("home")
+    }
+  }
 
-
+  const cleanMatches = () => {
+    console.log("Esse botão vai limpar os matches")
+  }
+  
   return (
     <div>
-      Astromatch
-      <HomePage/>
-      <MatchesPage/>
+      {currentPage === "home" ? <HomePage/> : <MatchesPage/>}
+      <button onClick={changePage}>{currentPage === "home" ? "Ir para Matches" : "Ir para Home"}</button>
+      <button onClick={cleanMatches}>Limpar Matches</button>
     </div>
+  
   )
 
-}
+} 
+
 
 export default App
