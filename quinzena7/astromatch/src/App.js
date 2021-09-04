@@ -25,7 +25,7 @@ const App = () => {
       <button onClick={cleanMatches}>Limpar Matches</button>
     </div>
   
-  )
+  )  
 
 } 
 
