@@ -4,6 +4,7 @@ import { useEffect } from 'react/cjs/react.development'
 import {HomeContainer, Profile, ProfileImage } from "./styled"
 
 
+
 export const HomePage = () => {
 
     const [profile, setProfile] = useState({})
@@ -25,7 +26,8 @@ export const HomePage = () => {
     }
 
     const choosePerson = () => {
-        console.log("Botão de escolha")
+        axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/rodrigo-inawashiro-Johnson/choose-person")
+        
         // saber se a escolha foi x ou <3
         //Fazer a requisição choose Person (POST)
         //No caso de sucesso(then), pedir mais um perfil
@@ -34,16 +36,17 @@ export const HomePage = () => {
 
     return(
         <HomeContainer>
+            {!profile ? <div> Acaram os perfis! Aperte o botão de limpar</div>:
             <Profile>
                 <ProfileImage src={profile.photo}/>
                 <h2>{profile.name}, {profile.age}</h2>
                 <p>{profile.bio}</p>
                 <div>
                     <button onClick={choosePerson}>X</button>
-                    <button onClick={choosePerson}>coração</button>
+                    <button onClick={choosePerson}>coracao</button>
                 </div>
             </Profile>
-           
+            }
         </HomeContainer>
     )
 }

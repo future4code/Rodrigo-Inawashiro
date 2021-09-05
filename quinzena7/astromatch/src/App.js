@@ -1,10 +1,12 @@
 import React, {useState} from "react"
 import { HomePage } from "./pages/HomePage/HomePage"
 import { MatchesPage } from "./pages/MatchesPage/MatchesPage"
+import axios from 'axios'
 
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home")
+  const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/rodrigo-inawashiro-Johnson/clear"
 
   const changePage = () => {
     if (currentPage === "home") {
@@ -15,7 +17,8 @@ const App = () => {
   }
 
   const cleanMatches = () => {
-    console.log("Esse botão vai limpar os matches")
+    axios.put(url);
+    alert("Matches apagados")
   }
   
   return (
