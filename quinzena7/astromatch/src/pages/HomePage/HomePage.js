@@ -5,9 +5,11 @@ import {HomeContainer, Profile, ProfileImage } from "./styled"
 
 
 
+
 export const HomePage = () => {
 
     const [profile, setProfile] = useState({})
+    //const [choosePerson, setChoosePerson] = useState([])
     
     const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/rodrigo-inawashiro-Johnson/person"
     
@@ -27,10 +29,17 @@ export const HomePage = () => {
 
     const choosePerson = () => {
         axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/rodrigo-inawashiro-Johnson/choose-person")
+        //{
+        //    "id": "71gMbZs2txS9LDvGK5Ew",
+        //    "choice": true
+        //}        
+        //.then((person) => {
+        //    setChoosePerson(person.data.choosePerson)
+        //})
+        //.catch((error){
+        //    console.log(error.response)
+        //})
         
-        // saber se a escolha foi x ou <3
-        //Fazer a requisição choose Person (POST)
-        //No caso de sucesso(then), pedir mais um perfil
     }
 
 
@@ -40,7 +49,7 @@ export const HomePage = () => {
             <Profile>
                 <ProfileImage src={profile.photo}/>
                 <h2>{profile.name}, {profile.age}</h2>
-                <p>{profile.bio}</p>
+                <h3>{profile.bio}</h3>
                 <div>
                     <button onClick={choosePerson}>X</button>
                     <button onClick={choosePerson}>coracao</button>
