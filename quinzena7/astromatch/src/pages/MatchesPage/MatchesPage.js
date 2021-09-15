@@ -12,8 +12,8 @@ export const MatchesPage = () => {
     const getMaches = () => {
         axios.get(url)
         .then((res) => {
-            console.log(res.data.MatchesPage)
-            setMatchesPage(res.data.MatchesPage)
+            console.log(res.data.matchesPage)
+            setMatchesPage(res.data.matches)
         })
         .catch((err) => {
             console.log(err.matchesPage)
@@ -24,16 +24,23 @@ export const MatchesPage = () => {
         getMaches()
     },[])
 
-    return(
+    
+    const newArrayMatch = matchesPage.map((item) => {              
+        return<li>{item.name}</li>
+    })
+    
+    return (
         <MatchesContainer>
             <ul>
-                <li>matches</li>
-                <li>matches</li>
-                <li>matches</li>
-                <li>matches</li>
-            
-            </ul>
-           
+                {newArrayMatch}
+        
+            </ul>       
         </MatchesContainer>
+        
     )
+     
+    
+    
+       
+    
 }
