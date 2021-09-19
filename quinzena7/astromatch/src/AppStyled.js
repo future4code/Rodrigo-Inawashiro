@@ -7,6 +7,7 @@ export const ButtonContainer  = styled.div `
    justify-content: center;
    padding: 20px ;
    margin: 20px;
+   
 
 `
 

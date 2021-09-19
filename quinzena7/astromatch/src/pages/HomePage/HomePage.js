@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react/cjs/react.development'
 import {HomeContainer, Profile, ProfileImage } from "./styled"
+import Button from '@material-ui/core/Button'
 
 
 
@@ -16,7 +17,7 @@ export const HomePage = () => {
         const getProfile = () => {
         axios.get(url)
         .then((res) => {
-            console.log(res.data.profile)
+            
             setProfile(res.data.profile)
         })
         .catch((err) => {
@@ -49,14 +50,18 @@ export const HomePage = () => {
 
     return(
         <HomeContainer>
-            {!profile ? <div> Acabaram os perfis! Aperte o botão de limpar</div>:
+            {!profile ? <div> Acaba ram os perfis! Aperte o botão de limpar</div>:
             <Profile>
                 <ProfileImage src={profile.photo}/>
                 <h2>{profile.name}, {profile.age}</h2>
                 <h3>{profile.bio}</h3>
                 <div>
-                    <button onClick={() => choosePerson(false)}>X</button>
-                    <button onClick={() => choosePerson(true)}>coracao</button>
+                    <Button onClick={() => choosePerson(false)} variant="contained" color="primary">
+                        XXX
+                    </Button>
+                    <Button onClick={() => choosePerson(true)} variant="contained" color="secondary">
+                        Match
+                    </Button>
                 </div>
             </Profile>
             }

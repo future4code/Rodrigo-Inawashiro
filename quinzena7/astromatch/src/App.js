@@ -26,6 +26,7 @@ const App = () => {
     <ButtonContainer>
       {currentPage === "home" ? <HomePage/> : <MatchesPage/>}
       <button onClick={changePage}>{currentPage === "home" ? "Ir para Matches" : "Ir para Home"}</button>
+        <br/>
       <button onClick={cleanMatches}>Limpar Matches</button>
     </ButtonContainer>
   
