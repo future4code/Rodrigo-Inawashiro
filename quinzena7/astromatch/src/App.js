@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import { HomePage } from "./pages/HomePage/HomePage"
 import { MatchesPage } from "./pages/MatchesPage/MatchesPage"
+import { ButtonContainer } from "./AppStyled"
 import axios from 'axios'
 
 
@@ -22,11 +23,12 @@ const App = () => {
   }
   
   return (
-    <div>
+    <ButtonContainer>
       {currentPage === "home" ? <HomePage/> : <MatchesPage/>}
       <button onClick={changePage}>{currentPage === "home" ? "Ir para Matches" : "Ir para Home"}</button>
+        <br/>
       <button onClick={cleanMatches}>Limpar Matches</button>
-    </div>
+    </ButtonContainer>
   
   )  
 
