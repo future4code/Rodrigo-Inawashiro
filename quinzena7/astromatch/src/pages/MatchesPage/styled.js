@@ -29,6 +29,8 @@ export const RoundImage = styled.img `
 export const ItemName = styled.div `
     align-items: center;
     justify-content: center;
+    font-size: 25px;
+    font-family: sans-serif;
     color: blue;
     
 `

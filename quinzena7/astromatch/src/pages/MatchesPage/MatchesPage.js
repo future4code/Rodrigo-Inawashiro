@@ -1,6 +1,5 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
-import { ProfileImage } from "../HomePage/styled"
 import { ListItemContainer, MatchesContainer, RoundImage, ItemName} from "./styled"
 
 

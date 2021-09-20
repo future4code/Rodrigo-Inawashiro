@@ -12,9 +12,12 @@ export const Profile = styled.div `
     flex-direction: column;
     align-items: center;
     width: 500px;
-    border: 1px solid green;
-    padding: 20px;
+    border: 3px solid magenta;
+    border-radius: 40px;
+    background-color: rgba(255,0,0,0.2);
+    padding: 10px 40px 40px 40px;
     margin: 20px;
+    font-family: sans-serif;
 
 `
 

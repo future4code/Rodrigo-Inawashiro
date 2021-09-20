@@ -52,12 +52,13 @@ export const HomePage = () => {
         <HomeContainer>
             {!profile ? <div> Acaba ram os perfis! Aperte o botão de limpar</div>:
             <Profile>
+                <h1>astromatch</h1>
                 <ProfileImage src={profile.photo}/>
                 <h2>{profile.name}, {profile.age}</h2>
                 <h3>{profile.bio}</h3>
                 <div>
                     <Button onClick={() => choosePerson(false)} variant="contained" color="primary">
-                        XXX
+                        XXXXX
                     </Button>
                     <Button onClick={() => choosePerson(true)} variant="contained" color="secondary">
                         Match
